@@ -1,0 +1,620 @@
+<!--
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo App</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+  <meta name="description" content="Notes.. Notes.. Notes..">
+  <meta name="keywords" content="Take note on your list">
+  <meta name="author" content="FonderElite">
+  <title>To do list</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/web-content-marketing-1/64/48-512.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/warengonzaga/daisy.js/daisy.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="index.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    background-color: rgb(41, 40, 40);
+    padding: 0;
+    margin: 0;
+
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+@media(max-width: 768px){ 
+    *{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+#todoh1{
+    color: 'white';
+    position: absolute;
+    left: 30%;
+}
+.container{
+position: absolute;
+width: 85%;
+height: 70%;
+background-color: rgb(27, 27, 27);
+border: 1px solid white;
+left: 8%;
+top: 20%;
+overflow: hidden;
+}
+#contain{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 5%;
+    
+}
+#todoh1{
+    border: 1px solid white;
+    background-color: rgb(41, 32, 32);
+    position: absolute;
+    top: 0%;
+    padding: 10px;
+    left: 27%;
+    letter-spacing: 2px;
+}
+
+#task{
+position: absolute;
+top: 4%;
+width: 15%;
+height: 8%;
+left: 5%;
+z-index: 1;
+
+}
+#section{
+    position: absolute;
+    top:10%;
+    background-color: chocolate;
+}
+#me{
+    position: absolute;
+    width:35.1%;
+    height:16.8%;
+    border-radius: 2%;
+    left: 56%;
+    top: 20%;
+    z-index: 1;
+    border: 1px solid white;
+}
+#me1{
+    position: absolute;
+    width: 75%;
+    height: 35%;
+    border-radius: 10%;
+    left: 11%;
+    top: 25%;
+    z-index: 1;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+#me1:hover{
+    transition: 0.5s;
+    width: 76%;
+    height: 36%;
+
+}
+#preload{
+    background-color: black;
+    width: 100%;
+    height: 133%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+#label{
+    font-size: 5vh;
+    top: 5%;
+    left: 17%;
+    position: absolute;
+    color:rgb(202, 195, 181);
+    
+}
+#label3{
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    background-color: rgb(20, 20, 19);
+    border: 1px solid white;
+   
+}
+#label2{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+#riddle{
+    color: rgb(41, 40, 40);
+    border-color: rgb(91, 204, 134);
+    top:75%;
+    left: 15%;
+    height: 5%;
+    width: 70%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#submit{
+    background-color: rgb(47, 153, 47);
+    border: 1px solid white;
+    padding: 10px 25px;
+    position: absolute;
+    top: 85%;
+    left: 36%;
+}
+#title1{
+    position: absolute;
+    top: 17%;
+    left: 8%;
+    z-index: 1;
+    width: 41%;
+    letter-spacing: 3px;
+    border: none;
+   font-size: 5vh;
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    text-shadow: 0px 5px 10px black;
+}
+#taskinput{
+    position: absolute;
+    left: 10%;
+    top: 37.5%;
+    z-index: 1;
+    padding: 10px 25px;
+    color: black;
+    font-weight: bold;
+    width: 60%;
+}
+#add{
+    color: black;
+    background-color: rgb(47, 175, 15);
+    border: 1px solid white;
+    color: white;
+    padding: 2% 8%;
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 10%;
+    
+}
+#day{
+    position: absolute;
+    left: 1%;
+    top: 90%;
+    letter-spacing: 2px;
+    font-size: 3vh;
+}
+#list{
+color: white;
+position: absolute;
+top:10%;
+}
+#todos{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 5%;
+}
+.remove{
+    color: white;
+    background-color: red;
+    padding: 5px 15px;
+    border:1px solid white;
+    position: absolute;
+    left: 100%;
+    
+}
+#clock{
+    position: absolute;
+    top: 95%;
+}
+li{
+    margin-bottom: 10px;
+}
+
+}
+/*PC*/
+@media(min-width: 800px){
+    #todoh1{
+    color: 'white';
+    position: absolute;
+    left: 30%;
+}
+.container{
+position: absolute;
+width: 60%;
+height: 80%;
+background-color: rgb(27, 27, 27);
+border: 1px solid white;
+left: 18%;
+top: 20%;
+overflow: hidden;
+}
+#contain{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 5%;
+    
+}
+#todoh1{
+    border: 1px solid white;
+    background-color: rgb(41, 32, 32);
+    position: absolute;
+    top: 0%;
+    padding: 10px;
+    left: 27%;
+    letter-spacing: 2px;
+}
+
+#task{
+position: absolute;
+top: 4%;
+width: 10%;
+height: 15%;
+left: 20%;
+background-color: rgb(161, 159, 159);
+border-radius: 10px;
+border: 1px solid white;
+z-index: 1;
+
+
+}
+#section{
+    position: absolute;
+    top:10%;
+    background-color: chocolate;
+}
+#me{
+    position: absolute;
+    width:15%;
+    height:25%;
+    border-radius: 2%;
+    left: 62.7%;
+    top: 20%;
+    z-index: 1;
+    border: 1px solid white;
+}
+#me1{
+    position: absolute;
+    width: 30%;
+    height: 35%;
+    border-radius: 10%;
+    left: 36%;
+    top: 23%;
+    z-index: 1;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+#preload{
+    background-color: black;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    z-index: 999;
+    
+}
+#label{
+    font-size: 7vh;
+    top: 5%;
+    left: 35%;
+    position: absolute;
+    color:rgb(202, 195, 181);
+    
+}
+#label3{
+    position: absolute;
+    top: 65%;
+    left: 31%;
+    background-color: rgb(20, 20, 19);
+    border: 1px solid white;
+    font-size: 4vh;
+   
+}
+#label2{
+    position: absolute;
+    top: 56%;
+    font-size: 4.5vh;
+    left: 40%;
+  
+}
+#riddle{
+    color: rgb(41, 40, 40);
+    border-color: rgb(37, 61, 46);
+    top:77%;
+    left: 25%;
+    height: 5%;
+    width: 48%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#submit{
+    background-color: rgb(47, 153, 47);
+    border: 1px solid white;
+    padding: 15px 30px;
+    position: absolute;
+    top: 85%;
+    left: 44%;
+}
+#title1{
+    position: absolute;
+    top: 17%;
+    left: 18.2%;
+    z-index: 1;
+    width: 42.8%;
+    letter-spacing: 3px;
+    border: none;
+   font-size: 5vh;
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    text-shadow: 0px 5px 10px black;
+    text-align: center;
+}
+#taskinput{
+    position: absolute;
+    left: 18.5%;
+    top: 31.5%;
+    z-index: 1;
+    padding: 27px 35px;
+    color: black;
+    font-weight: bold;
+    width: 38%;
+    text-align: center;
+}
+#add{
+    color: black;
+    background-color: rgb(47, 175, 15);
+    border: 1px solid white;
+    color: white;
+    padding: 1.5% 5%;
+    position: absolute;
+    z-index: 1;
+    top: 43%;
+    left: 18.5%;
+    
+}
+
+#todoh1{
+    border: 1px solid white;
+    background-color: rgb(41, 32, 32);
+    position: absolute;
+    top: 0%;
+    padding: 10px;
+    left: 40%;
+    font-size: 7vh;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 20px 10px black;
+}
+#day{
+    position: absolute;
+    left: 1%;
+    top: 90%;
+    letter-spacing: 2px;
+    font-size: 3vh;
+}
+#list{
+color: white;
+position: absolute;
+top:10%;
+}
+#todos{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 5%;
+}
+.remove{
+    color: white;
+    background-color: red;
+    padding: 5px 15px;
+    border:1px solid white;
+    position: absolute;
+    left: 100%;
+    
+}
+
+
+#day{
+position: absolute;
+font-size: 5vh;
+top: -6%;
+}
+#clock{
+position: absolute;
+font-size: 4vh;
+top: 0%;
+}
+#todos{
+    position: absolute;
+    left: 20%;
+    top:50%;
+    
+}
+
+li{
+    margin-bottom: 5px;
+    font-size: 4vh;
+}
+#timediv{
+position: absolute;
+background-color: black;
+}
+}
+</style>
+    </head>
+    <body>
+        <div id="preload">
+            <h2 id="label">Made By FonderElite</h2>
+            <img id="me1" onclick="hideme()"src="https://avatars.githubusercontent.com/u/71190959?s=460&u=abb877d3a28bdcfcd4a8fe4616d81d339e568c23&v=4">
+            <input id="riddle" placeholder="PLACE THE FLAG HERE">
+            <p id="label2">Decrypt This Hash: </p>
+            <p id="label3"> 75c6039a130d280b6d37d6314f7fd3d6</p>
+            <button id="submit" onclick="submit()">Submit</button>
+        </div>
+        <div id="contain">
+            <img id="task" src="https://cdn0.iconfinder.com/data/icons/web-content-marketing-1/64/48-512.png">
+       <div id="section1"> <h1 id="todoh1">To do List</h1>
+        <img id="me" src="https://avatars.githubusercontent.com/u/71190959?s=460&u=abb877d3a28bdcfcd4a8fe4616d81d339e568c23&v=4">
+        <h2 id="title1">Daily List</h2>
+        <input id="taskinput" placeholder="Write a Task"><button id="add" onclick="add()">Add</button>
+        <div id="todos"></div>
+     
+        <p class="time_itself" id="day"></p>
+        <p class="time_itself" id="clock"></p>
+        
+    </div>
+<div class="container">
+<div id="section"></div>
+</div>
+</div>
+<script>
+   $('#contain').daisyjs();
+   $('#contain').daisyjs({
+    dotColor: 'red',
+    lineColor: '#ff0000'
+});
+   function submit(){
+       const input = $('#riddle').val();
+       const preloader = $("#preload");
+      if(input == "YOUFOUNDME"){
+  preloader.hide(1500)
+      }
+  else{
+    Swal.fire({
+  icon: 'error',
+  title: 'Wrong Answer!',
+  text: 'Please Try Again.',
+  footer: '<a href>Why do I have this issue?</a>'
+})
+
+  }
+      }
+      $(document).ready(function(){
+        const changeMood = () =>{
+          const time = new Date();
+          let day = time.getDay();
+          let hours = time.getHours();
+          let min = time.getMinutes();
+          let seconds = time.getSeconds();
+          let clock = $('#clock').html(`Time: ${hours}:${min}:${seconds}s`);
+        switch(day){
+        case 0:
+            $('#title1').css("background-color", "#6a2025");
+            $('#day').html("Sunday");
+        break;
+        case 1:
+            $("#title1").css("background-color","#22432a");
+            $('#day').html("Monday");
+        break;
+        case 2:
+            $("#title1").css("background-color","#621244");
+            $('#day').html("Tuesday");
+            break;
+        case 3:
+            $("#title1").css("background-color","#BD2F2F");
+            $('#day').html("Wednesday");
+            break;
+         case 4:
+            $("#title1").css("background-color","#b2807e");
+            $('#day').html("Thursday");
+            break;
+         case 5:
+            $("#title1").css("background-color","#78789a");
+            $('#day').html("Friday");
+            break;
+        case 6:
+            $("#title1").css("background-color","#c09948");
+            $('#day').html("Saturday");
+            break; 
+        default:
+            $("#title1").css("background-color","#8eacac");
+            break;
+    }
+}
+     setInterval(changeMood,1000);
+      })
+      
+      /*TODO FUNCTIONALITY*/
+      function show() {
+    var todos = get_todos();
+
+    var html = '<ul>';
+    for(var i=0; i<todos.length; i++) {
+        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
+    };
+    html += '</ul>';
+
+    document.getElementById('todos').innerHTML = html;
+
+    const buttons = document.getElementsByClassName('remove');
+    for (var i=0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
+}
+
+      function get_todos() {
+    var todos = new Array;
+    var todos_str = localStorage.getItem('todo');
+    if (todos_str != null) {
+        todos = JSON.parse(todos_str); 
+    }
+    return todos;
+}
+function add() {
+    var task = document.getElementById('taskinput').value;
+
+    var todos = get_todos();
+    todos.push(task);
+    localStorage.setItem('todo', JSON.stringify(todos));
+
+    show();
+
+    return false;
+}
+function remove() {
+    var id = this.getAttribute('id');
+    var todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+ 
+    show();
+ 
+    return false;
+}
+ 
+
+    
+  
+
+</script>
+    </body>
+</html>
+-->
