@@ -1,0 +1,443 @@
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+    background-color: rgb(41, 40, 40);
+    padding: 0;
+    margin: 0;
+
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
+@media(max-width: 768px){ 
+    *{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+#todoh1{
+    color: 'white';
+    position: absolute;
+    left: 30%;
+}
+.container{
+position: absolute;
+width: 85%;
+height: 70%;
+background-color: rgb(27, 27, 27);
+border: 1px solid white;
+left: 8%;
+top: 20%;
+overflow: hidden;
+}
+#contain{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 5%;
+    
+}
+#todoh1{
+    border: 1px solid white;
+    background-color: rgb(41, 32, 32);
+    position: absolute;
+    top: 0%;
+    padding: 10px;
+    left: 27%;
+    letter-spacing: 2px;
+}
+
+#task{
+position: absolute;
+top: 4%;
+width: 15%;
+height: 8%;
+left: 5%;
+z-index: 1;
+
+}
+#section{
+    position: absolute;
+    top:10%;
+    background-color: chocolate;
+}
+#me{
+    position: absolute;
+    width:35.1%;
+    height:16.8%;
+    border-radius: 2%;
+    left: 56%;
+    top: 20%;
+    z-index: 1;
+    border: 1px solid white;
+}
+#me1{
+    position: absolute;
+    width: 75%;
+    height: 35%;
+    border-radius: 10%;
+    left: 11%;
+    top: 25%;
+    z-index: 1;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+#me1:hover{
+    transition: 0.5s;
+    width: 76%;
+    height: 36%;
+
+}
+#preload{
+    background-color: black;
+    width: 100%;
+    height: 133%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+#label{
+    font-size: 5vh;
+    top: 5%;
+    left: 17%;
+    position: absolute;
+    color:rgb(202, 195, 181);
+    
+}
+#label3{
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    background-color: rgb(20, 20, 19);
+    border: 1px solid white;
+   
+}
+#label2{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+#riddle{
+    color: rgb(41, 40, 40);
+    border-color: rgb(91, 204, 134);
+    top:75%;
+    left: 15%;
+    height: 5%;
+    width: 70%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#submit{
+    background-color: rgb(47, 153, 47);
+    border: 1px solid white;
+    padding: 10px 25px;
+    position: absolute;
+    top: 85%;
+    left: 36%;
+}
+#title1{
+    position: absolute;
+    top: 17%;
+    left: 8%;
+    z-index: 1;
+    width: 41%;
+    letter-spacing: 3px;
+    border: none;
+   font-size: 5vh;
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    text-shadow: 0px 5px 10px black;
+}
+#taskinput{
+    position: absolute;
+    left: 10%;
+    top: 37.5%;
+    z-index: 1;
+    padding: 10px 25px;
+    color: black;
+    font-weight: bold;
+    width: 60%;
+}
+#add{
+    color: black;
+    background-color: rgb(47, 175, 15);
+    border: 1px solid white;
+    color: white;
+    padding: 2% 8%;
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 10%;
+    
+}
+#day{
+    position: absolute;
+    left: 1%;
+    top: 90%;
+    letter-spacing: 2px;
+    font-size: 3vh;
+}
+#list{
+color: white;
+position: absolute;
+top:10%;
+}
+#todos{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 5%;
+}
+.remove{
+    color: white;
+    background-color: red;
+    padding: 5px 15px;
+    border:1px solid white;
+    position: absolute;
+    left: 100%;
+    
+}
+#clock{
+    position: absolute;
+    top: 95%;
+}
+li{
+    margin-bottom: 10px;
+}
+
+}
+/*PC*/
+@media(min-width: 800px){
+    #todoh1{
+    color: 'white';
+    position: absolute;
+    left: 30%;
+}
+.container{
+position: absolute;
+width: 60%;
+height: 80%;
+background-color: rgb(27, 27, 27);
+border: 1px solid white;
+left: 18%;
+top: 20%;
+overflow: hidden;
+}
+#contain{
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 5%;
+    
+}
+#todoh1{
+    border: 1px solid white;
+    background-color: rgb(41, 32, 32);
+    position: absolute;
+    top: 0%;
+    padding: 10px;
+    left: 27%;
+    letter-spacing: 2px;
+}
+
+#task{
+position: absolute;
+top: 4%;
+width: 10%;
+height: 15%;
+left: 20%;
+background-color: rgb(161, 159, 159);
+border-radius: 10px;
+border: 1px solid white;
+z-index: 1;
+
+
+}
+#section{
+    position: absolute;
+    top:10%;
+    background-color: chocolate;
+}
+#me{
+    position: absolute;
+    width:15%;
+    height:25%;
+    border-radius: 2%;
+    left: 62.7%;
+    top: 20%;
+    z-index: 1;
+    border: 1px solid white;
+}
+#me1{
+    position: absolute;
+    width: 30%;
+    height: 35%;
+    border-radius: 10%;
+    left: 36%;
+    top: 23%;
+    z-index: 1;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+#preload{
+    background-color: black;
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    z-index: 999;
+    
+}
+#label{
+    font-size: 7vh;
+    top: 5%;
+    left: 35%;
+    position: absolute;
+    color:rgb(202, 195, 181);
+    
+}
+#label3{
+    position: absolute;
+    top: 65%;
+    left: 31%;
+    background-color: rgb(20, 20, 19);
+    border: 1px solid white;
+    font-size: 4vh;
+   
+}
+#label2{
+    position: absolute;
+    top: 56%;
+    font-size: 4.5vh;
+    left: 40%;
+  
+}
+#riddle{
+    color: rgb(41, 40, 40);
+    border-color: rgb(37, 61, 46);
+    top:77%;
+    left: 25%;
+    height: 5%;
+    width: 48%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    
+}
+#submit{
+    background-color: rgb(47, 153, 47);
+    border: 1px solid white;
+    padding: 15px 30px;
+    position: absolute;
+    top: 85%;
+    left: 44%;
+}
+#title1{
+    position: absolute;
+    top: 17%;
+    left: 18.2%;
+    z-index: 1;
+    width: 42.8%;
+    letter-spacing: 3px;
+    border: none;
+   font-size: 5vh;
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    text-shadow: 0px 5px 10px black;
+    text-align: center;
+}
+#taskinput{
+    position: absolute;
+    left: 18.5%;
+    top: 31.5%;
+    z-index: 1;
+    padding: 27px 35px;
+    color: black;
+    font-weight: bold;
+    width: 38%;
+    text-align: center;
+}
+#add{
+    color: black;
+    background-color: rgb(47, 175, 15);
+    border: 1px solid white;
+    color: white;
+    padding: 1.5% 5%;
+    position: absolute;
+    z-index: 1;
+    top: 43%;
+    left: 18.5%;
+    
+}
+
+#todoh1{
+    border: 1px solid white;
+    background-color: rgb(41, 32, 32);
+    position: absolute;
+    top: 0%;
+    padding: 10px;
+    left: 40%;
+    font-size: 7vh;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 20px 10px black;
+}
+#day{
+    position: absolute;
+    left: 1%;
+    top: 90%;
+    letter-spacing: 2px;
+    font-size: 3vh;
+}
+#list{
+color: white;
+position: absolute;
+top:10%;
+}
+#todos{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    left: 5%;
+}
+.remove{
+    color: white;
+    background-color: red;
+    padding: 5px 15px;
+    border:1px solid white;
+    position: absolute;
+    left: 100%;
+    
+}
+
+
+#day{
+position: absolute;
+font-size: 5vh;
+top: -6%;
+}
+#clock{
+position: absolute;
+font-size: 4vh;
+top: 0%;
+}
+#todos{
+    position: absolute;
+    left: 20%;
+    top:50%;
+    
+}
+
+li{
+    margin-bottom: 5px;
+    font-size: 4vh;
+}
+#timediv{
+position: absolute;
+background-color: black;
+}
+}
