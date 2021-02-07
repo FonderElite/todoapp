@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todo App</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+  <meta name="description" content="Notes.. Notes.. Notes..">
+  <meta name="keywords" content="Take note on your list">
+  <meta name="author" content="FonderElite">
+  <title>To do list</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/web-content-marketing-1/64/48-512.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js" integrity="sha512-E378bwaeZf1nwXeJGIwTB58A5gPt5jFU3u6aTGja4ZdRFJeo/N/REKnBgNZOZlH6JdnOPO98vg2AnSGaNfCMFQ==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/warengonzaga/daisy.js/daisy.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="index.js"></script>
+
+    </head>
+    <body>
+        <div id="preload">
+            <h2 id="label">Made By FonderElite</h2>
+            <img id="me1" onclick="hideme()"src="https://avatars.githubusercontent.com/u/71190959?s=460&u=abb877d3a28bdcfcd4a8fe4616d81d339e568c23&v=4">
+            <input id="riddle" placeholder="PLACE THE FLAG HERE">
+            <p id="label2">Decrypt This Hash: </p>
+            <p id="label3"> 75c6039a130d280b6d37d6314f7fd3d6</p>
+            <button id="submit" onclick="submit()">Submit</button>
+        </div>
+        <div id="contain">
+            <img id="task" src="https://cdn0.iconfinder.com/data/icons/web-content-marketing-1/64/48-512.png">
+       <div id="section1"> <h1 id="todoh1">To do List</h1>
+        <img id="me" src="https://avatars.githubusercontent.com/u/71190959?s=460&u=abb877d3a28bdcfcd4a8fe4616d81d339e568c23&v=4">
+        <h2 id="title1">Daily List</h2>
+        <input id="taskinput" placeholder="Write a Task"><button id="add" onclick="add()">Add</button>
+        <div id="todos"></div>
+     
+        <p class="time_itself" id="day"></p>
+        <p class="time_itself" id="clock"></p>
+        
+    </div>
+<div class="container">
+<div id="section"></div>
+</div>
+</div>
+    </body>
+</html>
