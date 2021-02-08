@@ -66,10 +66,10 @@
       
       /*TODO FUNCTIONALITY*/
       function show() {
-    var todos = get_todos();
+    let todos = get_todos();
 
-    var html = '<ul>';
-    for(var i=0; i<todos.length; i++) {
+    let html = '<ul>';
+    for(let i=0; i<todos.length; i++) {
         html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
     };
     html += '</ul>';
@@ -77,23 +77,23 @@
     document.getElementById('todos').innerHTML = html;
 
     const buttons = document.getElementsByClassName('remove');
-    for (var i=0; i < buttons.length; i++) {
+    for (let i=0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', remove);
     };
 }
 
       function get_todos() {
-    var todos = new Array;
-    var todos_str = localStorage.getItem('todo');
+    let todos = new Array;
+    let todos_str = localStorage.getItem('todo');
     if (todos_str != null) {
         todos = JSON.parse(todos_str); 
     }
     return todos;
 }
 function add() {
-    var task = document.getElementById('taskinput').value;
+    let task = document.getElementById('taskinput').value;
 
-    var todos = get_todos();
+    let todos = get_todos();
     todos.push(task);
     localStorage.setItem('todo', JSON.stringify(todos));
 
@@ -102,8 +102,8 @@ function add() {
     return false;
 }
 function remove() {
-    var id = this.getAttribute('id');
-    var todos = get_todos();
+    let id = this.getAttribute('id');
+    let todos = get_todos();
     todos.splice(id, 1);
     localStorage.setItem('todo', JSON.stringify(todos));
  
