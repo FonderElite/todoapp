@@ -10,8 +10,9 @@
 - Not your average todo app 
 
 # Installation
-### ```git clone https://github.com/FonderElite/todoapp```
 ### Then paste in a code editor like VSCODE <img src="https://images.squarespace-cdn.com/content/592e86ee9de4bb6e73d8c154/1514037234329-9M1T31ZQJXFI3NT9FSJH/32078472-5053adea-baa7-11e7-9034-519002f12ac7.png?content-type=image%2Fpng" width="150" height="150" position="absolute">
+### ```git clone https://github.com/FonderElite/todoapp```
+
 
 # Compatability
 - [x] Chrome
