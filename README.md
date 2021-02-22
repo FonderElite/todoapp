@@ -15,10 +15,10 @@
 
 
 # Compatability
-> Chrome
-> Microsoft Edge
-> Yahoo
-> Duckduck go
+- [x] Chrome
+- [x] Microsoft Edge
+- [x]  Yahoo
+- [x] Duckduck go
 > Bing
 > Safari
 > IE(Maybe)
