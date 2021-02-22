@@ -1,6 +1,5 @@
-# Dillinger
-## _The Last Markdown Editor, Ever_
 # Todo App
+## Dont underestimate this todo app 
 - Write down your needs
 - Made with HTML,CSS,JS
 - Works ✨Magically✨
