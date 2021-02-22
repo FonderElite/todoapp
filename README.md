@@ -10,7 +10,7 @@
 - Not your average todo app 
 
 # Installation
-### Then paste in a code editor like VSCODE 
+### Then paste the code in a code editor like VSCODE 
 ### ```git clone https://github.com/FonderElite/todoapp```
 
 
