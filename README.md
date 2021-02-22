@@ -17,11 +17,11 @@
 # Compatability
 - [x] Chrome
 - [x] Microsoft Edge
-- [x]  Yahoo
+- [x] Yahoo
 - [x] Duckduck go
-> Bing
-> Safari
-> IE(Maybe)
+- [x] Bing
+- [x] Safari
+- [x] IE(Maybe)
 
 
 ## License
